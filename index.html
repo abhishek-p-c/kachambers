@@ -38,6 +38,33 @@
   ======================================================== -->
 </head>
 
+<script>
+  function updateTime() {
+    const now = new Date();
+    const targetTime = new Date();
+    targetTime.setHours(21);
+    targetTime.setMinutes(30);
+    targetTime.setSeconds(0);
+
+    // If the current time is already past 9:30 AM, set target to the next day at 9:30 AM
+    if (now.getTime() > targetTime.getTime()) {
+      targetTime.setDate(now.getDate() + 1);
+    }
+
+    const diff = targetTime - now;
+
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = `Time left: ${hours}h ${minutes}m ${seconds}s`;
+
+  }
+
+  setInterval(updateTime, 1000);
+  updateTime(); // Initial call to display time immediately
+</script>
+
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -162,7 +189,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4><a href="speaker-details.html">Abhishek P</a></h4>
-                  <span>SRIRAM Executive</span>
+                  <span>SHRIRAM Finance Executive</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -198,7 +225,7 @@
               <div class="member-info">
                 <div class="member-info-content">
                   <h4><a href="speaker-details.html">Sumanyu P N</a></h4>
-                  <span>INTUNE</span>
+                  <span>INTUNE Sales Executive</span>
                 </div>
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -209,7 +236,81 @@
               </div>
             </div>
           </div><!-- End Team Member -->
+        </div>
 
+        <div class="row gy-4" style="padding-top: 2%">
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="assets/img/speakers/ArunPro.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="speaker-details.html">Arun C K</a></h4>
+                  <span>Nalloru Job</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/__arun.ck__/"><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="assets/img/speakers/AbhishekKPro.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="speaker-details.html">Abhishek K</a></h4>
+                  <span>Teacher</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/__abhish_ek_/"><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="assets/img/speakers/SouravCPro.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="speaker-details.html">Sourav C</a></h4>
+                  <span>Crosswords Sales Executive</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/_sou____rav_/"><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <img src="assets/img/speakers/SouravKPro.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4><a href="speaker-details.html">Sourav K</a></h4>
+                  <span>B-Tech</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/_s_ou_ra_v__k_/"><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
         </div>
 
       </div>
@@ -221,8 +322,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Event Schedule<br></h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>വരാനിരിക്കുന്ന കഴപ്പുകൾ<br></h2>
+        <p>Saturday Funday</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -241,84 +342,31 @@
 
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
-          <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+          <h3 class="sub-heading">Weekly meetup at Ammencheri - 08:30 PM IST.</h3>
 
           <!-- Schdule Day 1 -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 AM</time></div>
+              <div class="col-md-2"><time>08:30 PM</time></div>
               <div class="col-md-10">
-                <h4>Registration</h4>
-                <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
+                <h4>എറക്കുന്നു അടിക്കുന്നു</h4>
+                <p>ഇന്നലെ ചേർന്ന യോഗത്തിൽ തീരുമാനിച്ചത്</p>
               </div>
             </div>
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
+              <div class="col-md-2"><time>09:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="assets/img/speakers/speaker-1-2.jpg" alt="Brenden Legros">
+                  <img src="assets/img/speakers/JawanPro.jpg" alt="Brenden Legros">
                 </div>
-                <h4>Keynote <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
+                <h4>Liquor <span>Jawan Rum</span></h4>
+                <p>ലിറ്ററിന് 640 രൂപയ്ക്ക് ലഭിച്ച ജവാന് ഇനി എത്രയാകും? വർധിപ്പിച്ചത് എത്ര രൂപ?</p>
               </div>
             </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-2-2.jpg" alt="Hubert Hirthe">
-                </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-3-2.jpg" alt="Cole Emmerich">
-                </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-4-2.jpg" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-5.jpg" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/speaker-6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-              </div>
-            </div>
+            <div class="counter" id="countdown"></div>
 
           </div><!-- End Schdule Day 1 -->
 
