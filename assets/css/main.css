@@ -891,7 +891,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1698,3 +1698,26 @@ section,
   font-weight: 600;
   background-color: transparent; /* Removed background */
 }
+
+.team-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  max-width: 100%;
+  aspect-ratio: 1 / 1; /* Maintain a square aspect ratio */
+  border-radius: 10px; /* Optional: Add border radius to give a rounded effect */
+}
+
+/* Ensures responsiveness */
+@media (max-width: 1200px) {
+  .team-img {
+    max-width: 100%; /* Images will scale according to the available width */
+  }
+}
+
+@media (max-width: 768px) {
+  .team-img {
+    max-width: 100%; /* Ensures images scale properly on smaller devices */
+  }
+}
+
